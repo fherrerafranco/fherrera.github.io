@@ -14,12 +14,15 @@ function App() {
 
   const technicalSkills = [
     'Node.js', 'JavaScript', 'TypeScript', 'Express.js', 'NestJS', 'Node-RED', 'React', 'MongoDB', 'ArangoDB',
-    'PostgreSQL', 'Redis', 'RESTful APIs', 'Microservices', 'AWS EC2', 'AWS Lambda', 'AWS S3',
-    'AWS SQS', 'Azure AKS', 'Azure Storage', 'Azure Functions', 'GCP GKE', 'GCP Log Analytics' 
+    'PostgreSQL', 'Redis', 'RESTful APIs', 'Microservices', 
+    'Git', 'GitHub', 'Version Control', 'Jest', 'Mocha', 'End-to-end Testing', 'Unit Testing',
+    'Jira', 'Agile Methodologies', 'Problem Solving', 'Team Collaboration', 'Critical Thinking'
   ];
 
   const cloudPlatforms = [
-    'AWS', 'GCP', 'Azure'
+    'AWS', 'AWS EC2', 'AWS Lambda', 'AWS S3', 'AWS CloudWatch', 'AWS SQS', 
+    'Azure', 'Azure AKS', 'Azure Storage', 'Azure Log Insights', 'Azure Functions', 
+    'GCP','GCP GKE', 'GCP Log Analytics',
   ];
 
   const cicdTools = [
@@ -28,8 +31,8 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 transition-colors duration-200">
+      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-primary-900 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
+        <div className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-xl rounded-xl p-8 transition-colors duration-200 border border-primary-100 dark:border-primary-800">
           <ThemeToggle />
           <LanguageSelector />
           <Header />
@@ -57,7 +60,9 @@ function App() {
               <SkillList skills={cicdTools} />
             </Section>
 
-            <Experience />
+            <Section title={t('sections.experience.title')}>
+              <Experience />
+            </Section>
 
             <Section title={t('sections.education.title')}>
               <div>
