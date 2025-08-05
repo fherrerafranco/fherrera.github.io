@@ -9,7 +9,7 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className="fixed top-4 left-16">
+    <div className="fixed bottom-16 right-4 md:top-4 md:left-16 md:bottom-auto md:right-auto">
       <select
         onChange={changeLanguage}
         value={i18n.language}
