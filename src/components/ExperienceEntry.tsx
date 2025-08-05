@@ -18,8 +18,8 @@ export default function ExperienceEntry({ roleKey }: ExperienceEntryProps) {
       <ul className="list-none ml-0 mt-4 text-gray-700 dark:text-gray-300 space-y-2">
         {(t(`sections.experience.${roleKey}.achievements`, { returnObjects: true }) as string[]).map((achievement: string, index: number) => (
           <li key={index} className="flex items-start">
-            <span className="text-primary-500 mr-2">•</span>
-            <span>{achievement}</span>
+            <span className="text-primary-500 mr-2 pt-1">•</span>
+            <span className="text-justify">{achievement}</span>
           </li>
         ))}
       </ul>
