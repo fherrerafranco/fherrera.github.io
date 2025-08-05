@@ -9,11 +9,11 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className="fixed bottom-16 right-4 md:top-4 md:left-16 md:bottom-auto md:right-auto">
+    <div className="relative">
       <select
         onChange={changeLanguage}
         value={i18n.language}
-        className="pl-8 pr-2 py-2 rounded-lg bg-secondary-100 dark:bg-secondary-800 text-secondary-800 dark:text-secondary-200 hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-all duration-200 appearance-none cursor-pointer"
+        className="pl-8 pr-2 py-2 rounded-lg bg-secondary-100 dark:bg-secondary-800 text-secondary-800 dark:text-secondary-200 hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-all duration-200 appearance-none cursor-pointer shadow-md backdrop-blur-sm"
         aria-label={t('language.select')}
       >
         <option value="en">EN</option>

@@ -31,10 +31,12 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-primary-900 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-        <div className="max-w-4xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-xl rounded-xl p-8 transition-colors duration-200 border border-primary-100 dark:border-primary-800">
+      <div className="relative min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-primary-900 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
+        <div className="absolute top-2 right-2 flex items-center gap-2 z-[100]">
           <ThemeToggle />
           <LanguageSelector />
+        </div>
+        <div className="relative max-w-4xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-xl rounded-xl p-8 transition-colors duration-200 border border-primary-100 dark:border-primary-800">
           <Header />
           <main>
             <Section title={t('sections.summary.title')}>
